@@ -1,0 +1,299 @@
+body{
+    overflow-x: hidden;
+}
+
+#heros {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    margin-top: 6%;
+    width: 100%;
+    height: 45vh; /* Ensures the hero section takes up the full viewport height */
+    background-image: url('/img/class.bg.jpg'); /* Set the background image */
+    background-size: cover; /* Ensure the whole image is shown without cropping */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure the pseudo-element is contained within the hero section */
+}
+
+.blue{
+    font-size: 40px;
+    color: #031238;
+}
+
+#classroom {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.video-call{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin: 30px;
+    background-color: #fdf7f7;
+    margin-top: 3%;
+    box-shadow: 0 4px 8px rgba(20, 20, 20, 0.89);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.video-call h2{
+    text-align: center;
+}
+.video-window {
+    flex: 2;
+    background-color: hsla(0, 0%, 4%, 0.959);
+    border-radius: 10px;   
+    position: relative;
+    width: 70%;
+    height: 100vh;
+}
+
+.video-window video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 40%;
+}
+
+.shared-screen {
+    margin-top: 20px;
+    flex: 2;
+    margin-bottom: 20%;
+}
+
+.shared-screen iframe {
+    width: 70%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.upload-controls {
+    margin-top: 10px;
+}
+
+.upload-controls input[type="file"] {
+    margin-right: 10px;
+}
+
+.upload-controls button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #b4b3b3;
+    padding: 40px;
+    margin: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 60px;
+}
+
+.chat-sidebar h3{
+    text-align: center;
+}
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#chatForm {
+    display: flex;
+}
+
+#chatForm input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #dd3a3a;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#chatForm button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#chatForm button:hover {
+    background-color: #0056b3;
+}
+
+#startCallButton{
+    background-color: #21f50d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    width: 20%;
+    margin-top: 30px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#startCallButton:hover {
+    background-color: #05570c;
+    transform: scale(1.05);
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    margin-top: 10%;
+    padding: 20px;
+    background-color: #ffd6a5;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #0a0a0a;
+    margin-bottom: 20px;
+}
+
+.poll, .quiz {
+    margin-bottom: 50px;
+}
+
+.poll h2, .quiz h2 {
+    margin-bottom: 10px;
+}
+
+.poll p, .quiz .question p {
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #c97296;
+}
+
+#pollResults, #quizResults {
+    margin-top: 20px;
+}
+
+
+.containers {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-section, .resource-list {
+    margin-bottom: 30px;
+    margin: 20px;
+}
+
+.resource-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.resource-list a:hover{
+    color: #007bff;
+}
+button {
+    padding: 10px 20px;
+    background-color: #ffd6a5;
+    color: #302d2d;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#uploadStatus {
+    margin-top: 10px;
+    color: #28a745;
+}
+
+.resource-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-list li {
+    margin-bottom: 10px;
+}
+
+/* MEDIA QUERY*/
+@media (max-width: 1400px) {
+    #classroom{
+      flex-direction: column;
+    }
+    .video-call{
+       margin-top: 50px;
+    }
+    .chat-sidebar{
+       margin-top: 20px;
+    } 
+    .container{
+        margin-top: 60%;
+    }
+    .shared-screen{
+        height: 40%;
+    }
+    .upload-controls button{
+            float: right;
+            margin-top: -30px;
+    }
+    .chat-sidebar {
+        height: 100vh;
+        margin-top: 20px;
+        padding: 20%;
+        border-radius: 40px;
+    }
+    #chatForm {
+        display: flex;
+        margin-bottom: 20px;
+        margin-left: -35%;
+    }
+    
+    #main{
+        margin-top: 45%;
+    }
+      
+  }
+  

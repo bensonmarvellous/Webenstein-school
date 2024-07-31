@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webenstein</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/class.css">
+    <link rel="stylesheet" href="/css/homework.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo-img.jpeg" alt="University Logo" class="logo">
+        <h1 class="logo">Webenstein</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/class.html">Classes</a></li>
+                <li><a href="/Homework.html">Homework</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="heros">
+        <div class="hero-content">
+            <h2>Creativity Meets Technology</h2>
+    </section>   
+
+        <div class="container4">
+            <h1>Schedule Management</h1>
+    
+            <div class="weekly-timetable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody id="timetable">
+                        <!-- Timetable slots will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="calendar-sync">
+                <button onclick="syncWithCalendar()">Sync with Personal Calendar</button>
+                <button onclick="setReminders()">Set Reminders</button>
+            </div>
+        </div>
+    
+    <h1>Homework Submission</h1>
+            
+        <div class="container">
+          
+            <table class="homework-table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Description</th>
+                        <th>Due Date</th>
+                        <th>Upload</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Development</td>
+                        <td>Solve the given problems in the attached worksheet.</td>
+                        <td>2024-07-27</td>
+                        <td>
+                            <input type="file" id="mathFile">
+                            <button onclick="uploadHomework('mathFile', 'Mathematics')">Submit</button>
+                        </td>
+                        <td id="mathStatus">Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Science</td>
+                        <td>Write a report on the given experiment.</td>
+                        <td>2024-08-18</td>
+                        <td>
+                            <input type="file" id="scienceFile">
+                            <button onclick="uploadHomework('scienceFile', 'Science')">Submit</button>
+                        </td>
+                        <td id="scienceStatus">Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Cybersecurity</td>
+                        <td>Read the chapter on firewalls concepts and submit the summary.</td>
+                        <td>2024-08-18</td>
+                        <td>
+                            <input type="file" id="physicsFile">
+                            <button onclick="uploadHomework('physicsFile', 'Physics')">Submit</button>
+                        </td>
+                        <td id="physicsStatus">Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Digital Marketing</td>
+                        <td>Read the chapter on Client satisfaction concepts and submit the summary.</td>
+                        <td>2024-08-18</td>
+                        <td>
+                            <input type="file" id="physicsFile">
+                            <button onclick="uploadHomework('physicsFile', 'Physics')">Submit</button>
+                        </td>
+                        <td id="physicsStatus">Pending</td>
+                    </tr>   
+                    <!-- Add more assignments as needed -->
+                </tbody>
+            </table>
+            
+            <div class="reminders">
+                <h2>Upcoming Deadlines</h2>
+                <table class="reminder-table">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reminderList">
+                        <!-- Reminders will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        <div class="discussion-section">
+            <h2>Discussion</h2>
+            <div class="discussion-controls">
+                <input type="text" id="searchInput" placeholder="Search discussions...">
+                <button onclick="searchDiscussions()">Search</button>
+            </div>
+                <select id="trendingDropdown" class="flex">
+                    <option value="all">Trending</option>
+                    <option value="topic1">Topic 1</option>
+                    <option value="topic2">Topic 2</option>
+                    <option value="topic3">Topic 3</option>
+                </select>
+                <button onclick="showAskQuestionModal()">Ask a Question</button>
+           
+            </div>
+            <div id="askQuestionModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeAskQuestionModal()">&times;</span>
+                    <textarea id="questionText" placeholder="Ask your question..."></textarea>
+                    <button onclick="postDiscussion()">Post</button>
+              
+            </div>
+            <div id="discussionList">
+                <!-- Discussion posts will be dynamically added here -->
+            </div>
+        </div>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are committed to providing high-quality online education to enhance your learning experience. Join us and take your skills to the next level!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#homework">Homework</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: Webenstein@university.com</p>
+                <p>Phone: +123 456 7890</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/message/4CAN3GNGIHZUD1"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://x.com/dark_quote_s?t=1ekyk9tkZkOcv6abZBaSgg&s=09"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/webenstein_university?igsh=YzljYTk1ODg3Zg=="><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Webenstein. All rights reserved.</p>
+        </div>
+    </footer>
+    
+        <script src="/js/homework.js"></script>
+    </body>
+    </html>
+    

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webenstein</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="/css/class.css">
+   <link rel="stylesheet" href="/css/index.css">
+   <script src="https://meet.jit.si/external_api.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <img src="img/logo-img.jpeg" alt="University Logo" class="logo">
+        <h1 class="logo">Webenstein</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/class.html">Classes</a></li>
+                <li><a href="/Homework.html">Homework</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="heros">
+        <div class="hero-content">
+            <h2>Creativity Meets Technology</h2>
+    </section>
+<h1 class="blue">Welcome to the virtual classroom</h1>
+    <div id="classroom">
+        <div class="video-call">
+            <h2>Class Video chat</h2>
+            <div  id="jitsi-container" class="video-window"></div>
+            <button id="startCallButton">Start Call</button>  
+            <div class="shared-screen">
+                <h3>Shared Screen</h3>
+                <iframe src="/Living in the Light_ A guide to personal transformation ( PDFDrive ).pdf" frameborder="0"></iframe>
+                <div class="upload-controls">
+                    <input type="file" id="fileInput">
+                    <button id="uploadButton">Upload Document</button>
+                </div>    
+            </div>           
+        </div>
+        <div class="chat-sidebar">
+            <h3>ChatRoom</h3>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be appended here -->
+            </div>
+            <form id="chatForm">
+                <input type="text" id="chatInput" placeholder="Type your message here..." required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+        
+    <section id="main">
+        <h1>Learning is now made easy <br> for our  Students</h1>
+        <div class="content-container">
+            <div class="left-content">
+                <h5>DO YOU KNOW?</h5>
+                <h5>YOU CAN NOW!!</h5>
+                </div>
+            <div class="right-content">
+                <div class="box standalone-box event-box1">
+                    <h2>Get latest updates</h2>
+                    <p>Stay updated with the latest news and announcements from the university.</p>
+                </div>
+                <div class="stacked-boxes ">
+                    <div class="box event-box2">
+                        <h2>Download PDFS</h2>
+                        <p>You can now download pdf on things taught in the class.</p>
+                    </div>
+                    <div class="box event-box3">
+                        <h2>Join Classes online</h2>
+                        <p>Virtual meetings can now holdc online</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <h1>Resource Sharing and Downloads</h1>
+    <div class="containers">
+       <div class="upload-section">
+            <h2>Upload Resources</h2>
+            <input type="file" id="fileUpload" />
+            <button type="button" onclick="uploadResource()">Upload</button>
+            <div id="uploadStatus"></div>
+        </div>
+        
+        <div class="resource-list">
+            <h2>Available Resources</h2>
+            <ul id="resourceList">
+                <!-- Dynamically added resources will appear here -->
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Take a quick survey</h1>
+        <div class="poll">
+            <h2>Quick Poll</h2>
+            <p>Do you find online classes effective?</p>
+            <form id="pollForm">
+                <label><input type="radio" name="poll" value="Yes"> Yes</label><br>
+                <label><input type="radio" name="poll" value="No"> No</label><br>
+                <label><input type="radio" name="poll" value="Maybe"> Maybe</label><br>
+                <button type="button" onclick="submitPoll()">Submit</button>
+            </form>
+            <div id="pollResults"></div>
+        </div>   
+    </div>
+    <div class="container">
+        <div class="quiz">
+            <h2>Quick Quiz</h2>
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. What does HTML stand for?</p>
+                    <label><input type="radio" name="q1" value="Hypertext Markup Language"> Hypertext Markup Language</label><br>
+                    <label><input type="radio" name="q1" value=" Higher Mark Langiage"> Higher Mark Langiage</label><br>
+                    <label><input type="radio" name="q1" value=" Hyper Markup Language"> Hyper Markup Language</label> <br>
+                </div>
+                <br>
+                <div class="question">
+                    <p>2. Does the following C++ script have errors? #include "stdafx.h" #include <iostream> using namespace std; int main() {          cout<<"Hello world"<<endl          return 0; } </p> <br>
+                        <br>      
+                    <label><input type="radio" name="q2" value="Yes"> Yes</label><br>
+                    <label><input type="radio" name="q2" value="No"> No</label><br>
+                    <label><input type="radio" name="q2" value="Maybe"> Maybe</label><br>
+                </div>
+                <br>
+                <div class="question">
+                    <p>3.  What is the correct way of making a header in HTML.</p> <br>
+                    <label><input type="radio" name="q3" value="h1"> h1 </label><br>
+                    <label><input type="radio" name="q3" value="T"> T </label><br>
+                    <label><input type="radio" name="q3" value="P">P </label><br>
+                </div>
+                <button type="button" onclick="submitQuiz()">Submit</button>
+            </form>
+              
+            <div id="quizResults"></div>
+        </div>
+    </div>
+    
+    </div>
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are committed to providing high-quality online education to enhance your learning experience. Join us and take your skills to the next level!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#homework">Homework</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: Webenstein@university.com</p>
+                <p>Phone: +123 456 7890</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/message/4CAN3GNGIHZUD1"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://x.com/dark_quote_s?t=1ekyk9tkZkOcv6abZBaSgg&s=09"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/webenstein_university?igsh=YzljYTk1ODg3Zg=="><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Webenstein. All rights reserved.</p>
+        </div>
+    </footer>    
+   <script src="/js/class.js"></script>
+</body>
+</html>

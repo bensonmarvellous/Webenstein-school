@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>LagosSpark</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo-img.jpeg" alt="University Logo" class="logo">
+        <h1 class="logo">Webenstein</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/class.html">Classes</a></li>
+                <li><a href="/Homework.html">Homework</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section id="login">
+<div id="login-content">
+<h2>Login to your <br>account</h2>
+<p>Check your courses, Join classes and <br> Check your schedule.</p>
+</div>
+</section>
+<div class="auth-container">
+    <div class="login-btn">
+                <button id="loginBtn" type="submit">Login</button>
+        </div>
+        <div class="signup-btn">  
+             <button id="signupBtn" type="submit">Sign Up</button>
+        </div>  
+        </div>
+    <div id="options">
+     <h5>Log in with</h5>  
+     <div class="icon">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-google"></i>+</a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+     </div> 
+    </div>  
+
+    <div id="loginForm" class="auth-form">
+        <h2>Login</h2>
+        <form>
+            <div class="input-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" name="loginEmail" required>
+            </div>
+            <div class="input-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+            </div>
+            <button type="submit">Login</button>
+            <button type="button" id="cancelLogin">Cancel</button>
+        </form>
+    </div>
+    <div id="signupForm" class="auth-form">
+        <h2>Sign Up</h2>
+        <form>
+            <div class="input-group">
+                <label for="signupName">Name</label>
+                <input type="text" id="signupName" name="signupName" required>
+            </div>
+            <div class="input-group">
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" name="signupEmail" required>
+            </div>
+            <div class="input-group">
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" name="signupPassword" required>
+            </div>
+            <button type="submit">Sign Up</button>
+            <button type="button" id="cancelSignup">Cancel</button>
+        </form>
+    </div>
+<script src="/js/auth.js"></script> 
+</body>
+</html>

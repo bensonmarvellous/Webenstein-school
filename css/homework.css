@@ -1,0 +1,282 @@
+#heros {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    margin-top: 6%;
+    width: 100%;
+    height: 55vh; /* Ensures the hero section takes up the full viewport height */
+    background-image: url('/img/homework-bg.jpg'); /* Set the background image */
+    background-size: cover; /* Ensure the whole image is shown without cropping */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure the pseudo-element is contained within the hero section */
+}
+
+.weekly-timetable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.weekly-timetable th, .weekly-timetable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.weekly-timetable th {
+    background-color: #f2f2f2;
+}
+
+.timetable-slot {
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.monday { background-color: #FF5733; }
+.tuesday { background-color: #33B5FF; }
+.wednesday { background-color: #FF33FF; }
+.thursday { background-color: #33FF57; }
+.friday { background-color: #FF9933; }
+
+.calendar-sync {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.calendar-sync button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none; 
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.calendar-sync button:hover {
+    background-color: #0056b3;
+}  
+
+
+.container {
+    width: 120%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.homework-table, .reminder-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+}
+
+.homework-table th, .homework-table td, .reminder-table th, .reminder-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.homework-table th, .reminder-table th {
+    background-color: #f2f2f2;
+}
+
+.status {
+    font-weight: bold;
+}
+
+
+.discussion-section {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.discussion-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.discussion-controls input[type="text"], .discussion-controls select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.discussion-controls button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.discussion-controls button:hover {
+    background-color: #0056b3;
+}
+
+#discussionList {
+    margin-top: 20px;
+}
+
+.discussion-post {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.discussion-post .student-info {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.discussion-post .question {
+    margin-bottom: 10px;
+}
+
+.discussion-post .reply-section {
+    margin-top: 10px;
+}
+
+.reply-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.reply-section button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.reply-section button:hover {
+    background-color: #218838;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px; 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+ 
+@media (max-width: 1400px){
+    .container {
+        width: 100%;
+        margin: auto;
+        padding: 70px;
+        background-color: white;
+        margin-top: 20px;
+    }
+    .homework-table th, .homework-table td, .reminder-table th, .reminder-table td {
+        padding: 3px;
+    }
+    .reminders{
+        margin-right: 25%;
+    }
+    .container4{
+        margin: 10px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container4 {
+        width: 55%;
+        margin-left: 20%;
+       }
+
+    .weekly-timetable table, 
+    .weekly-timetable thead, 
+    .weekly-timetable tbody, 
+    .weekly-timetable th, 
+    .weekly-timetable td, 
+    .weekly-timetable tr {
+        display: block;
+    }
+
+    .weekly-timetable thead tr {
+        display: none;
+    }
+
+    .weekly-timetable tr {
+        margin-bottom: 15px;
+    }
+
+    .weekly-timetable td {
+        position: relative;
+        padding-left: 45%;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .weekly-timetable td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 25%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    .weekly-timetable td:last-child {
+        border-bottom: 0;
+    }
+}
